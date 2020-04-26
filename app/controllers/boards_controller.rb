@@ -23,8 +23,7 @@ class BoardsController < ApplicationController
   end
 
   def show
-    @comment = @board.comments.new
-    binding.pry
+    @comment = Comment.new(board_id: @board.id)
   end
 
   def edit
